@@ -14,6 +14,8 @@ class MyHome extends StatefulWidget {
 }
 
 class _MyHomeState extends State<MyHome> {
+  List<User> usersInPosts = MockData.USERS_IN_POSTS;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -59,13 +61,7 @@ class _MyHomeState extends State<MyHome> {
           ),
 
           //Card
-          for (final user in [
-            //NOTE: Put users posts here
-            User(username: "username"),
-            User(username: "username"),
-            User(username: "username"),
-          ])
-            UserPostsAutoResized(user: user),
+          for (final user in usersInPosts) UserPostsAutoResized(user: user),
         ],
       ),
     );

@@ -1,17 +1,16 @@
 // ignore_for_file: non_constant_identifier_names
 
 import 'package:flutter/material.dart';
-import 'package:proyecto_final_flutter/models/user_posts.dart';
 import 'package:proyecto_final_flutter/user_story.dart';
+
+import 'models/user.dart';
 
 final class MockData {
   static final List<(IconData, Null Function())> ICONS_ACTIONS = [
     (Icons.favorite_border, () {}),
     (
       Icons.search,
-      () {
-        throw UnimplementedError();
-      }
+      () => null,
     ),
   ];
 
@@ -22,5 +21,12 @@ final class MockData {
     )
   ];
 
-  static final List<UserPosts> USER_POSTS = [];
+  // static final List<UserPosts> USER_POSTS = [];
+
+  static List<User> USERS_IN_POSTS = <User>[
+    //NOTE: Put users posts here
+    User(username: "username"),
+    User(username: "username"),
+    User(username: "username"),
+  ];
 }
